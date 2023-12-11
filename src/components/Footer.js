@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-left">
-        {/* Replace the logo src with your actual logo image */}
-        <img src="path/to/your/logo.png" alt="Company Logo" className="footer-logo" />
+        
+        <img src="/Users/SpeedySponge/Repositories/e-commerce-app/public/Images/Logo no BG.png" alt="Company Logo" className="footer-logo" />
         <div className="social-links">
           <a href="#" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} />
@@ -39,7 +39,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faGlobe} /> Website: www.yourwebsite.com
           </p>
         </div>
-        {/* Add a container for Google Maps integration here */}
+        
         <div className="map-container">
           {/* Add your Google Maps component or embed code here */}
         </div>

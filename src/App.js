@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/mycart" element={<MyCart />} />
         <Route path="/addproduct" element={<AddProduct />} />
       </Routes>
-      <Footer /> {/* Add the Footer component here */}
+      <Footer />
     </Router>
   );
 };

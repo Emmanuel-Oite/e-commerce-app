@@ -31,13 +31,13 @@ const Checkout = () => {
     // Redirect based on the selected payment option
     if (paymentOption === 'card') {
       // Redirect to credit card payment page
-      window.location.href = 'https://example.com/credit-card-payment';
+      window.location.href = 'https://mea.mastercard.com/en-region-mea.html';
     } else if (paymentOption === 'cash') {
       // Redirect to cash on delivery page
-      window.location.href = 'https://example.com/cash-on-delivery';
+      window.location.href = 'https://codshopy.com/';
     } else if (paymentOption === 'paypal') {
       // Redirect to PayPal payment page
-      window.location.href = 'https://example.com/paypal-payment';
+      window.location.href = 'https://www.paypal.com/ke/home';
     }
 
     // Clear the cart or update its state as needed
@@ -78,7 +78,7 @@ const Checkout = () => {
           onChange={handleAddressChange}
           className="input-field"
         />
-        {/* Add more address fields as needed */}
+        
       </div>
       <button onClick={handleCheckout} className="checkout-button">
         Checkout
