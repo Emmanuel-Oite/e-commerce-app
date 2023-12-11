@@ -119,6 +119,7 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .add-product-button:hover {
@@ -251,10 +252,54 @@ h3, p {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  margin-bottom: 20px;
 }
 
 .checkout-button:hover {
   background-color: #45a049;
 }
+.footer-container {
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
 
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 50px; /* Adjust the size as needed */
+  margin-right: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+
+  a {
+    color: #333;
+    font-size: 20px;
+  }
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+.map-container {
+  /* Style your map container here */
+}
 

@@ -5,7 +5,8 @@ import Header from './components/Header';
 import Homepage from './components/Homepage';
 import ProductList from './components/ProductList';
 import MyCart from './components/MyCart';
-import AddProduct from './components/AddProduct'; // Import the AddProduct component
+import AddProduct from './components/AddProduct';
+import Footer from './components/Footer'; // Import the Footer component
 
 const App = () => {
   return (
@@ -15,8 +16,9 @@ const App = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/mycart" element={<MyCart />} />
-        <Route path="/addproduct" element={<AddProduct />} /> {/* New route for AddProduct */}
+        <Route path="/addproduct" element={<AddProduct />} />
       </Routes>
+      <Footer /> {/* Add the Footer component here */}
     </Router>
   );
 };
