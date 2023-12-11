@@ -1,0 +1,126 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 19.99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "image": "https://placekitten.com/300/200"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 29.99,
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "image": "https://placekitten.com/300/201"
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price": 39.99,
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "image": "https://placekitten.com/300/202"
+    },
+    {
+      "id": 4,
+      "title": "Product 4",
+      "price": 49.99,
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "size": [
+        "L",
+        "XL"
+      ],
+      "image": "https://placekitten.com/300/203"
+    },
+    {
+      "id": 5,
+      "title": "Product 5",
+      "price": 59.99,
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "size": [
+        "M",
+        "XL"
+      ],
+      "image": "https://placekitten.com/300/204"
+    },
+    {
+      "id": 6,
+      "title": "Product 6",
+      "price": 69.99,
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "size": [
+        "S",
+        "L",
+        "XL"
+      ],
+      "image": "https://placekitten.com/300/205"
+    },
+    {
+      "id": 7,
+      "title": "Product 7",
+      "price": 79.99,
+      "description": "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "size": [
+        "M",
+        "L"
+      ],
+      "image": "https://placekitten.com/300/206"
+    },
+    {
+      "id": 8,
+      "title": "Product 8",
+      "price": 89.99,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "size": [
+        "S",
+        "XL"
+      ],
+      "image": "https://placekitten.com/300/207"
+    },
+    {
+      "id": 9,
+      "title": "Product 9",
+      "price": 99.99,
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "size": [
+        "L"
+      ],
+      "image": "https://placekitten.com/300/208"
+    },
+    {
+      "id": 10,
+      "title": "Product 10",
+      "price": 109.99,
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "size": [
+        "M",
+        "XL"
+      ],
+      "image": "https://placekitten.com/300/209"
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "",
+      "size": "",
+      "image": "",
+      "id": 11
+    }
+  ]
+}
