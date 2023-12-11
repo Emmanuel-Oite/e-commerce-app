@@ -27,7 +27,9 @@ const ProductList = () => {
   };
 
   return (
+    
     <div className="grid-container">
+      
       {products.map((product) => (
         <div key={product.id} className="product-card">
           <img
