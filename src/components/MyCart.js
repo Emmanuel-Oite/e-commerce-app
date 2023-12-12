@@ -27,6 +27,18 @@ const MyCart = () => {
                   <h3>{product.title}</h3>
                   <p>${product.price.toFixed(2)}</p>
                   <p>{product.description}</p>
+                  {/* Display user reviews */}
+                  <div className="user-reviews">
+                    <h4>User Reviews</h4>
+                    <ul>
+                      {product.reviews.map((review, index) => (
+                        <li key={index} className="user-review">
+                          <p>{review.user}</p>
+                          <p>{review.comment}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <button onClick={() => removeFromCart(product)} className="remove-button">
                     <FontAwesomeIcon icon={faTrash} />
                   </button>

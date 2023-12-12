@@ -5,48 +5,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const ProductList = () => {
-  const [products, setProducts] = useState([]);
+  const [courses, setCourses] = useState([]);
   const { dispatch } = useCart();
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const fetchCourses = async () => {
       try {
-        const response = await fetch('http://localhost:3001/products');
+        const response = await fetch('http://localhost:3001/courses');
         const data = await response.json();
-        setProducts(data);
+        setCourses(data || []); // Ensure courses is an array
       } catch (error) {
-        console.error('Error fetching products:', error);
+        console.error('Error fetching courses:', error);
       }
     };
 
-    fetchProducts();
+    fetchCourses();
   }, []);
 
-  const addToCart = (product) => {
-    dispatch({ type: 'ADD_TO_CART', payload: product });
+  const addToCart = (course) => {
+    dispatch({ type: 'ADD_TO_CART', payload: course });
   };
 
   return (
-    
     <div className="grid-container">
-      
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
+      {courses.map((course) => (
+        <div key={course.id} className="product-card">
           <img
-            src={product.image}
-            alt={product.title}
+            src={course.image}
+            alt={course.title}
             className="product-image"
           />
-          <h3 className="text-lg font-semibold mb-2">{product.title}</h3>
-          {typeof product.price === 'number' && (
-            <p className="text-gray-600 mb-2">${product.price.toFixed(2)}</p>
+          <h3 className="text-lg font-semibold mb-2">{course.title}</h3>
+          {typeof course.price === 'number' && (
+            <p className="text-gray-600 mb-2">${course.price.toFixed(2)}</p>
           )}
-          <p className="text-gray-500">{product.description}</p>
-          <p className="mt-4">
-            Available sizes: {Array.isArray(product.size) ? product.size.join(', ') : ''}
-          </p>
+          <p className="text-gray-500">{course.shortDescription}</p>
           <button
-            onClick={() => addToCart(product)}
+            onClick={() => addToCart(course)}
             className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md"
           >
             <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />

@@ -1,134 +1,124 @@
 {
-  "products": [
+  "courses": [
     {
       "id": 1,
-      "title": "Product 1",
-      "price": 19.99,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "image": "https://placekitten.com/300/200"
+      "title": "Digital Marketing Mastery",
+      "price": 49.99,
+      "shortDescription": "Learn the essentials of digital marketing and boost your online presence.",
+      "longDescription": "In this comprehensive digital marketing course, you'll master the skills needed to succeed in the digital landscape. From social media marketing to search engine optimization, this course covers it all.",
+      "image": "https://example.com/digital_marketing.jpg",
+      "reviews": [
+        {"user": "Alice", "comment": "Excellent course! Highly recommended."},
+        {"user": "Bob", "comment": "Great content and practical insights."}
+      ]
     },
     {
       "id": 2,
-      "title": "Product 2",
-      "price": 29.99,
-      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "size": [
-        "M",
-        "L",
-        "XL"
-      ],
-      "image": "https://placekitten.com/300/201"
+      "title": "Hydroponics Fundamentals",
+      "price": 59.99,
+      "shortDescription": "Discover the art and science of growing plants without soil.",
+      "longDescription": "Explore the fascinating world of hydroponics and learn the principles behind soil-less plant cultivation. From nutrient solutions to advanced hydroponic systems, this course guides you through it all.",
+      "image": "https://example.com/hydroponics.jpg",
+      "reviews": [
+        {"user": "Eva", "comment": "Amazing course! I've successfully set up my hydroponic garden."},
+        {"user": "Charlie", "comment": "Very informative. Loved the practical demonstrations."}
+      ]
     },
     {
       "id": 3,
-      "title": "Product 3",
-      "price": 39.99,
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "size": [
-        "S",
-        "M",
-        "L"
-      ],
-      "image": "https://placekitten.com/300/202"
+      "title": "Quantum Mechanics Unleashed",
+      "price": 79.99,
+      "shortDescription": "Delve into the mysterious world of quantum mechanics and its mind-bending concepts.",
+      "longDescription": "Embark on a journey through the principles of quantum mechanics, from wave-particle duality to quantum entanglement. This course is designed to make complex concepts accessible and engaging.",
+      "image": "https://example.com/quantum_mechanics.jpg",
+      "reviews": [
+        {"user": "Grace", "comment": "Mind-blowing! I never thought quantum mechanics could be this interesting."},
+        {"user": "David", "comment": "The instructor's explanations are clear, making difficult concepts easy to understand."}
+      ]
     },
     {
       "id": 4,
-      "title": "Product 4",
-      "price": 49.99,
-      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "size": [
-        "L",
-        "XL"
-      ],
-      "image": "https://placekitten.com/300/203"
+      "title": "Artificial Intelligence for Beginners",
+      "price": 69.99,
+      "shortDescription": "Unlock the basics of AI and understand its applications in the real world.",
+      "longDescription": "Dive into the fundamentals of artificial intelligence, machine learning, and neural networks. This course provides a solid foundation for beginners interested in AI technologies.",
+      "image": "https://example.com/ai_for_beginners.jpg",
+      "reviews": [
+        {"user": "Frank", "comment": "Great introduction to AI. Clear and concise."},
+        {"user": "Sophia", "comment": "The hands-on exercises were incredibly helpful."}
+      ]
     },
     {
       "id": 5,
-      "title": "Product 5",
-      "price": 59.99,
-      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "size": [
-        "M",
-        "XL"
-      ],
-      "image": "https://placekitten.com/300/204"
+      "title": "Culinary Arts Masterclass",
+      "price": 89.99,
+      "shortDescription": "Explore the world of culinary arts and elevate your cooking skills.",
+      "longDescription": "Join this masterclass to learn advanced culinary techniques, flavor pairings, and presentation skills. Whether you're a beginner or an experienced cook, this course has something for everyone.",
+      "image": "https://example.com/culinary_arts.jpg",
+      "reviews": [
+        {"user": "Isabella", "comment": "Fantastic course! My cooking has improved significantly."},
+        {"user": "Alex", "comment": "The chef's tips are invaluable. Highly recommended."}
+      ]
     },
     {
       "id": 6,
-      "title": "Product 6",
-      "price": 69.99,
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "size": [
-        "S",
-        "L",
-        "XL"
-      ],
-      "image": "https://placekitten.com/300/205"
+      "title": "Financial Literacy for Millennials",
+      "price": 59.99,
+      "shortDescription": "Empower yourself with essential financial knowledge for the modern age.",
+      "longDescription": "Take control of your finances with this comprehensive course. Learn about budgeting, investing, and financial planning tailored to the unique challenges faced by millennials.",
+      "image": "https://example.com/financial_literacy.jpg",
+      "reviews": [
+        {"user": "Ryan", "comment": "This course is a game-changer for managing finances."},
+        {"user": "Mia", "comment": "Practical advice that every millennial should follow."}
+      ]
     },
     {
       "id": 7,
-      "title": "Product 7",
+      "title": "Astrophysics Explained",
       "price": 79.99,
-      "description": "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "size": [
-        "M",
-        "L"
-      ],
-      "image": "https://placekitten.com/300/206"
+      "shortDescription": "Embark on a cosmic journey and unravel the mysteries of the universe.",
+      "longDescription": "Explore the wonders of astrophysics, from the formation of stars to the structure of galaxies. This course provides a deep understanding of our place in the cosmos.",
+      "image": "https://example.com/astrophysics.jpg",
+      "reviews": [
+        {"user": "Sam", "comment": "Fascinating course! I'm hooked on astrophysics now."},
+        {"user": "Olivia", "comment": "The visuals and explanations make complex topics easy to grasp."}
+      ]
     },
     {
       "id": 8,
-      "title": "Product 8",
-      "price": 89.99,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "size": [
-        "S",
-        "XL"
-      ],
-      "image": "https://placekitten.com/300/207"
+      "title": "Photography for Beginners",
+      "price": 49.99,
+      "shortDescription": "Unleash your creativity with the basics of photography.",
+      "longDescription": "Learn the essentials of photography, from understanding your camera to capturing stunning compositions. This course is perfect for beginners with a passion for visual storytelling.",
+      "image": "https://example.com/photography.jpg",
+      "reviews": [
+        {"user": "Jack", "comment": "Great course for beginners. Practical tips for better photos."},
+        {"user": "Emma", "comment": "I never thought I could take such amazing photos. Thanks, instructor!"}
+      ]
     },
     {
       "id": 9,
-      "title": "Product 9",
-      "price": 99.99,
-      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "size": [
-        "L"
-      ],
-      "image": "https://placekitten.com/300/208"
+      "title": "Environmental Sustainability in Business",
+      "price": 69.99,
+      "shortDescription": "Explore sustainable practices and their impact on modern businesses.",
+      "longDescription": "Discover how businesses can contribute to environmental sustainability. This course covers eco-friendly practices, corporate responsibility, and green business strategies.",
+      "image": "https://example.com/sustainability_in_business.jpg",
+      "reviews": [
+        {"user": "Leo", "comment": "Eye-opening course! Every business should prioritize sustainability."},
+        {"user": "Sophie", "comment": "Practical insights for implementing sustainability in any industry."}
+      ]
     },
     {
       "id": 10,
-      "title": "Product 10",
-      "price": 109.99,
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "size": [
-        "M",
-        "XL"
-      ],
-      "image": "https://placekitten.com/300/209"
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": "",
-      "size": "",
-      "image": "",
-      "id": 11
-    },
-    {
-      "title": "goooo",
-      "description": "goooo",
-      "price": "69.420",
-      "size": "large",
-      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.westfield.ma.edu%2FPersonalPages%2Fdraker%2Fedcom%2Ffinal%2Fwebprojects%2Fsp11%2Ffarmanimals%2FCatD.html&psig=AOvVaw1NXH1Ftv5JZCdLMUT-d_wC&ust=1702466121009000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOiEj9jiiYMDFQAAAAAdAAAAABAD",
-      "id": 12
+      "title": "Mindfulness Meditation for Stress Relief",
+      "price": 39.99,
+      "shortDescription": "Calm your mind and reduce stress with mindfulness meditation techniques.",
+      "longDescription": "Learn the art of mindfulness meditation to find inner peace and reduce stress in your daily life. This course provides practical exercises and guidance for beginners.",
+      "image": "https://example.com/mindfulness_meditation.jpg",
+      "reviews": [
+        {"user": "Liam", "comment": "Life-changing! I feel more relaxed and focused."},
+        {"user": "Ava", "comment": "Highly recommend for anyone dealing with stress or anxiety."}
+      ]
     }
   ]
 }

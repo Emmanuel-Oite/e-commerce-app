@@ -8,8 +8,11 @@ const AddProduct = ({ onAddProduct }) => {
     title: '',
     description: '',
     price: '',
-    size: '',
     image: '',
+    reviews: [
+      { user: 'User1', comment: 'Great product! Highly recommend.' },
+      { user: 'User2', comment: 'Awesome quality. Will buy again.' },
+    ],
   });
 
   const handleChange = (e) => {
@@ -36,8 +39,11 @@ const AddProduct = ({ onAddProduct }) => {
           title: '',
           description: '',
           price: '',
-          size: '',
           image: '',
+          reviews: [
+            { user: 'User1', comment: 'Great product! Highly recommend.' },
+            { user: 'User2', comment: 'Awesome quality. Will buy again.' },
+          ],
         });
       } else {
         console.error('Failed to add product:', response.statusText);
@@ -76,16 +82,6 @@ const AddProduct = ({ onAddProduct }) => {
             type="text"
             name="price"
             value={newProduct.price}
-            onChange={handleChange}
-            className="input-field"
-          />
-        </div>
-        <div>
-          <label className="label">Size</label>
-          <input
-            type="text"
-            name="size"
-            value={newProduct.size}
             onChange={handleChange}
             className="input-field"
           />
