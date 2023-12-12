@@ -13,7 +13,6 @@ const MyCart = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch reviews from the server when the component mounts
     const fetchReviews = async () => {
       try {
         const response = await fetch('http://localhost:3001/reviews');
@@ -44,16 +43,18 @@ const MyCart = () => {
           comment: reviewText,
         }),
       });
-
+  
       if (response.ok) {
-        // If the POST request is successful, update the reviews state
-        setReviews((prevReviews) => ({
-          ...prevReviews,
-          [productId]: { user: userName, comment: reviewText },
-        }));
+        const updatedReviews = { ...reviews };
+        if (!updatedReviews[productId]) {
+          updatedReviews[productId] = [];
+        }
+        updatedReviews[productId].push({ user: userName, comment: reviewText });
+  
+        setReviews(updatedReviews);
         setReviewText('');
         setUserName('');
-        setError(null); // Reset error state on success
+        setError(null);
       } else {
         setError('Failed to add review. Please try again.');
       }
@@ -78,18 +79,21 @@ const MyCart = () => {
                   <h3>{product.title}</h3>
                   <p>${product.price.toFixed(2)}</p>
                   <p>{product.description}</p>
-                  {/* Display Long Description */}
                   <p>{product.longDescription}</p>
                   {/* Display Existing Reviews */}
-                  {reviews[product.id] && (
-                    <div>
-                      <h4>Customer Reviews:</h4>
-                      <p>
-                        <strong>{reviews[product.id].user}: </strong>
-                        {reviews[product.id].comment}
-                      </p>
-                    </div>
-                  )}
+                  <div className="existing-reviews">
+                    {reviews[product.id] && (
+                      <div>
+                        <h4>Customer Reviews:</h4>
+                        {reviews[product.id].map((review, index) => (
+                          <p key={index}>
+                            <strong>{review.user}: </strong>
+                            {review.comment}
+                          </p>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                   {/* Add Review Section */}
                   <div className="add-review-container">
                     <label>Add Your Review:</label>

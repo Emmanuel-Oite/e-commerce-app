@@ -6,8 +6,9 @@ import '../index.css';
 const AddProduct = ({ onAddProduct }) => {
   const [newProduct, setNewProduct] = useState({
     title: '',
-    description: '',
-    price: '',
+    shortDescription: '',
+    longDescription: '',
+    price: 0,
     image: '',
     reviews: [
       { user: 'User1', comment: 'Great product! Highly recommend.' },
@@ -22,7 +23,7 @@ const AddProduct = ({ onAddProduct }) => {
 
   const handleAddProduct = async () => {
     try {
-      const response = await fetch('http://localhost:3001/products', {
+      const response = await fetch('http://localhost:3001/courses', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,8 +38,9 @@ const AddProduct = ({ onAddProduct }) => {
         // Clear the form fields
         setNewProduct({
           title: '',
-          description: '',
-          price: '',
+          shortDescription: '',
+          longDescription: '',
+          price: 0,
           image: '',
           reviews: [
             { user: 'User1', comment: 'Great product! Highly recommend.' },
@@ -58,10 +60,10 @@ const AddProduct = ({ onAddProduct }) => {
       <h2 className="text-2xl font-semibold mb-4 text-center">Add a Product</h2>
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2">
-          <label className="label">Description</label>
+          <label className="label">Long Description</label>
           <textarea
-            name="description"
-            value={newProduct.description}
+            name="longDescription"
+            value={newProduct.longDescription}
             onChange={handleChange}
             className="input-field textarea-field"
           />
@@ -79,7 +81,7 @@ const AddProduct = ({ onAddProduct }) => {
         <div>
           <label className="label">Price</label>
           <input
-            type="text"
+            type="number"
             name="price"
             value={newProduct.price}
             onChange={handleChange}
