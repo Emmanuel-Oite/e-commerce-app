@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCart } from '../contexts/CartContext';
 import Checkout from './Checkout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,9 +7,60 @@ import '../index.css';
 
 const MyCart = () => {
   const { cart, dispatch } = useCart();
+  const [reviews, setReviews] = useState({});
+  const [reviewText, setReviewText] = useState('');
+  const [userName, setUserName] = useState('');
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Fetch reviews from the server when the component mounts
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/reviews');
+        const data = await response.json();
+        setReviews(data);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
 
   const removeFromCart = (product) => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: product });
+  };
+
+  const addReview = async (productId) => {
+    try {
+      const response = await fetch('http://localhost:3001/reviews', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          productId,
+          user: userName,
+          comment: reviewText,
+        }),
+      });
+
+      if (response.ok) {
+        // If the POST request is successful, update the reviews state
+        setReviews((prevReviews) => ({
+          ...prevReviews,
+          [productId]: { user: userName, comment: reviewText },
+        }));
+        setReviewText('');
+        setUserName('');
+        setError(null); // Reset error state on success
+      } else {
+        setError('Failed to add review. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error adding review:', error);
+      setError('Failed to add review. Please try again.');
+    }
   };
 
   return (
@@ -27,18 +78,38 @@ const MyCart = () => {
                   <h3>{product.title}</h3>
                   <p>${product.price.toFixed(2)}</p>
                   <p>{product.description}</p>
-                  {/* Display user reviews */}
-                  <div className="user-reviews">
-                    <h4>User Reviews</h4>
-                    <ul>
-                      {product.reviews.map((review, index) => (
-                        <li key={index} className="user-review">
-                          <p>{review.user}</p>
-                          <p>{review.comment}</p>
-                        </li>
-                      ))}
-                    </ul>
+                  {/* Display Long Description */}
+                  <p>{product.longDescription}</p>
+                  {/* Display Existing Reviews */}
+                  {reviews[product.id] && (
+                    <div>
+                      <h4>Customer Reviews:</h4>
+                      <p>
+                        <strong>{reviews[product.id].user}: </strong>
+                        {reviews[product.id].comment}
+                      </p>
+                    </div>
+                  )}
+                  {/* Add Review Section */}
+                  <div className="add-review-container">
+                    <label>Add Your Review:</label>
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      value={userName}
+                      onChange={(e) => setUserName(e.target.value)}
+                      className="input-field"
+                    />
+                    <textarea
+                      value={reviewText}
+                      onChange={(e) => setReviewText(e.target.value)}
+                      className="input-field"
+                    />
+                    <button onClick={() => addReview(product.id)} className="add-review-button">
+                      Add Review
+                    </button>
                   </div>
+                  {error && <p style={{ color: 'red' }}>{error}</p>}
                   <button onClick={() => removeFromCart(product)} className="remove-button">
                     <FontAwesomeIcon icon={faTrash} />
                   </button>
